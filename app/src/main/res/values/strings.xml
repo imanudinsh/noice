@@ -151,6 +151,8 @@
     Use Noice to cast its ambience to other Chromecast enabled devices such as speakers, TVs, etc.
   </string>
   <string name="help">Help</string>
+  <string name="home">Home</string>
+  <string name="transition_groups">Transition Groups</string>
   <string-array name="app_themes">
     <item>Light</item>
     <item>Dark</item>

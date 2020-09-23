@@ -18,13 +18,13 @@ import com.github.ashutoshgngwr.noice.sound.player.PlayerManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.Slider
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_sound_list.view.*
+import kotlinx.android.synthetic.main.fragment_sound_library.view.*
 import kotlinx.android.synthetic.main.layout_list_item__sound.view.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
-class SoundLibraryFragment : Fragment(R.layout.fragment_sound_list) {
+class SoundLibraryFragment : Fragment(R.layout.fragment_sound_library) {
 
   private var mRecyclerView: RecyclerView? = null
   private var mSavePresetButton: FloatingActionButton? = null

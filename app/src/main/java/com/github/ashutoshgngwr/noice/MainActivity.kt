@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     // this map helps in reducing boilerplate for launching these fragments when appropriate
     // menu item is clicked in the navigation drawer.
     private val NAVIGATED_FRAGMENTS = mapOf(
-      R.id.library to SoundLibraryFragment::class.java,
+      R.id.home to HomeFragment::class.java,
       R.id.saved_presets to PresetFragment::class.java,
       R.id.sleep_timer to SleepTimerFragment::class.java,
       R.id.wake_up_timer to WakeUpTimerFragment::class.java,
@@ -93,17 +93,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
       }
 
-      if (R.id.library == navigation_drawer.checkedItem?.itemId) {
+      if (R.id.home == navigation_drawer.checkedItem?.itemId) {
         supportActionBar?.setTitle(R.string.app_name)
       } else {
         supportActionBar?.title = navigation_drawer.checkedItem?.title
       }
     }
 
-    // set sound library fragment when activity is created initially (screen-orientation change
+    // set home fragment when activity is created initially (screen-orientation change
     // will recall onCreate which will cause weird and unexpected fragment changes otherwise).
     if (savedInstanceState == null) {
-      setFragment(intent.getIntExtra(EXTRA_CURRENT_NAVIGATED_FRAGMENT, R.id.library))
+      setFragment(intent.getIntExtra(EXTRA_CURRENT_NAVIGATED_FRAGMENT, R.id.home))
 
       // show app intro if user hasn't already seen it
       AppIntroActivity.maybeStart(this)

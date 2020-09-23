@@ -65,14 +65,14 @@ class MainActivityTest {
   }
 
   @Test
-  fun testIfSoundLibraryIsVisibleOnStart() {
+  fun testIfHomeFragmentIsVisibleOnStart() {
     activityScenario.onActivity {
       assertEquals(
-        SoundLibraryFragment::class.java.simpleName,
+        HomeFragment::class.java.simpleName,
         it.supportFragmentManager.getBackStackEntryAt(it.supportFragmentManager.backStackEntryCount - 1).name
       )
 
-      assertEquals(R.id.library, it.navigation_drawer.checkedItem?.itemId)
+      assertEquals(R.id.home, it.navigation_drawer.checkedItem?.itemId)
     }
   }
 
@@ -310,7 +310,7 @@ class MainActivityTest {
 
       it.onBackPressed()
       assertEquals(
-        SoundLibraryFragment::class.java.simpleName,
+        HomeFragment::class.java.simpleName,
         it.supportFragmentManager
           .getBackStackEntryAt(it.supportFragmentManager.backStackEntryCount - 1)
           .name
